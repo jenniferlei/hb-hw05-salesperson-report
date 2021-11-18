@@ -58,6 +58,8 @@ def melons_by_salesperson(path):
 
             # at salesperson key, get the existing num melons and add num melons to value
             melons_by_sales[salesperson] = melons_by_sales.get(salesperson, 0) + melons
+    
+    return melons_by_sales
 
 
 def print_melons_by_salesperson(melons_by_sales_dict):
@@ -67,7 +69,7 @@ def print_melons_by_salesperson(melons_by_sales_dict):
         melons_by_sales_dict (dict) - {salesperson_name: melons_sold}
     '''
     # for each index of the salespeople list, print salesperson and how many melons they sold
-    for salesperson, melons in melons_by_sales_dict_sold.items():
+    for salesperson, melons in melons_by_sales_dict.items():
         print(f'{salesperson} sold {melons} melons')
 
 
